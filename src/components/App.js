@@ -1,10 +1,10 @@
 import React from 'react';
-import AlbumList from './AlbumList';
+import PostList from './PostList';
 
 const App = () => {
   return (
     <div className="ui container">
-      <AlbumList />
+      <PostList />
     </div>
   );
 };

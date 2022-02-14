@@ -14,7 +14,7 @@ class UserHeader extends React.Component {
     if (!user) {
       return null;
     }
-    return <div className="header">歌手:{user.name}</div>;
+    return <div className="header">Writer:{user.name}</div>;
   }
 }
 
