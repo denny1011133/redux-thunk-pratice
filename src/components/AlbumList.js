@@ -6,10 +6,25 @@ class AlbumList extends React.Component {
     componentDidMount() {
         this.props.fetchAlbums()
     }
-    render() {
-        console.log(this.props.albums);
-        return <div>123</div>;
+    renderList() {
+        return this.props.albums.map(album => {
+            return (
+                <div className="item" key={album.id}>
+                    <i className="large middle aligned icon user" />
+                    <div className="content">
+                        <div className="description">
+                            <h2>{album.title}</h2>
+                            <p>{album.body}</p>
+                        </div>
+                    </div>
+                </div>
+            );
+        });
     }
+    render() {
+        return <div className="ui relaxed divided list">{this.renderList()}</div>;
+    }
+
 }
 
 
