@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux"
 import { fetchAlbums } from "../actions"
+import UserHeader from './UserHeader';
 
 class AlbumList extends React.Component {
     componentDidMount() {
@@ -13,9 +14,9 @@ class AlbumList extends React.Component {
                     <i className="large middle aligned icon user" />
                     <div className="content">
                         <div className="description">
-                            <h2>{album.title}</h2>
-                            <p>{album.body}</p>
+                            <h5>歌曲:{album.title}</h5>
                         </div>
+                        <UserHeader userId={album.userId} />
                     </div>
                 </div>
             );
