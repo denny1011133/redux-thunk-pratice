@@ -10,4 +10,4 @@ class AlbumList extends React.Component {
     }
 }
 
-export default connect(null, fetchAlbums)(AlbumList);
+export default connect(null, {fetchAlbums})(AlbumList);
